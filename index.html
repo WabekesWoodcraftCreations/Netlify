@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wabekes Woodcraft Creations in Hamilton, Michigan creates authentic woodcraft, laser engraving, home decor, accessories, ornaments, flags, and custom gifts.">
+  <title>Wabekes Woodcraft Creations</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://images.pexels.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Wabekes Woodcraft Creations home">
+      <span class="brand-mark">W</span>
+      <span>
+        <strong>Wabekes</strong>
+        <small>Woodcraft Creations</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#work">Craft</a>
+      <a href="#custom">Custom</a>
+      <a href="#shop">Products</a>
+      <a href="#contact">Contact</a>
+      <button id="cartButton" class="cart-button" type="button">Cart <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <img class="hero-image" src="https://unsplash.com/photos/OoOJyr6BD7I/download?force=true&w=1800" alt="Hands carving wood with chisels and shavings on a workbench">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Authentic woodcraft and laser engraving</p>
+        <h1>Wabekes Woodcraft Creations</h1>
+        <p class="hero-copy">Family-owned woodworking, laser engraved pieces, ornaments, flags, earrings, wall art, and custom gifts handcrafted in Hamilton, Michigan.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#shop">See all products</a>
+          <a class="button secondary" href="#contact">Contact Wabekes</a>
+        </div>
+      </div>
+      <aside class="hero-note" aria-label="Workshop highlights">
+        <span>Handcrafted with precision</span>
+        <strong>Each piece tells a unique story.</strong>
+      </aside>
+    </section>
+
+    <section class="intro-band">
+      <div class="intro-grid">
+        <div>
+          <p class="eyebrow">Our craftsmanship</p>
+          <h2>Woodworking and engraving made with care, detail, and character.</h2>
+        </div>
+        <p>Wabekes Woodcraft Creations is dedicated to creating authentic woodworking and laser engraved products. Each piece is meticulously handcrafted with precision, from small accessories to heirloom keepsakes and custom home decor.</p>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">What they make</p>
+        <h2>Woodcraft, laser engraving, keepsakes, accessories, and home decor.</h2>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="https://unsplash.com/photos/o6FqxW6IAUI/download?force=true&w=900" alt="Handmade wooden cutting boards with visible natural grain">
+          <div>
+            <p>Woodcraft</p>
+            <h3>Flags, boards, and layered designs</h3>
+            <span>American flags, wavy flags, folded flags, pledge boards, and layered wooden art.</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.pexels.com/photos/15209821/pexels-photo-15209821.jpeg?auto=compress&cs=tinysrgb&w=900" alt="A handmade wooden bowl held in a workshop">
+          <div>
+            <p>Gifts</p>
+            <h3>Ornaments, frames, and canvas art</h3>
+            <span>Personalized ornaments, classic ornaments, custom photo frames, and custom canvas art.</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=900&q=80" alt="Woodworking tools and wood shavings in a workshop">
+          <div>
+            <p>Engraving</p>
+            <h3>Earrings, business cards, and decor</h3>
+            <span>Laser engraved earrings, premium metal business cards, scripture wall hangings, and seasonal decor.</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="custom" class="split-section">
+      <div class="split-copy">
+        <p class="eyebrow">Custom orders</p>
+        <h2>Start with a design, a photo, a message, or a gift idea.</h2>
+        <p>Wabekes offers custom woodworking and laser engraved items made to bring warmth and character to your space. Share the product type, personalization, color or stain preference, and timeline, then they can help shape the details.</p>
+        <div class="process-list">
+          <div>
+            <span>01</span>
+            <strong>Share</strong>
+            <p>Send the product, message, image, or idea you want made.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Choose</strong>
+            <p>Pick style, color, wood type, stain, size, or amount where available.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Create</strong>
+            <p>Your piece is crafted, engraved, finished, and prepared for pickup or shipping.</p>
+          </div>
+        </div>
+      </div>
+      <div class="quote-panel" aria-label="Product option picker">
+        <h3>Choose product options</h3>
+        <label for="orderProduct">Product</label>
+        <select id="orderProduct"></select>
+        <img id="selectedProductImage" class="selected-product-image" src="" alt="">
+        <div id="optionFields" class="option-fields"></div>
+        <label for="orderQuantity">Quantity</label>
+        <input id="orderQuantity" type="number" min="1" value="1">
+        <output id="priceOutput" for="orderProduct">Select a product</output>
+        <p id="productNote" class="product-note">Pick a product to see its available options and current price.</p>
+        <button id="addToCartButton" class="button primary wide" type="button">Add to cart</button>
+        <button id="viewCartButton" class="button ghost wide" type="button">View cart</button>
+      </div>
+    </section>
+
+    <section id="shop" class="section shop-section">
+      <div class="section-heading">
+        <p class="eyebrow">Product catalog</p>
+        <h2>Handcrafted products, gifts, decor, and engraving.</h2>
+        <p class="catalog-note">Browse current products, starting prices, and sale prices for custom orders and ready-made pieces.</p>
+      </div>
+      <div class="shop-grid">
+        <article>
+          <h3>Personalized Ornaments</h3>
+          <p>Personalized seasonal ornaments.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Classic Ornaments</h3>
+          <p>Classic handcrafted ornament designs.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Mug Tree Holders</h3>
+          <p>Wooden mug tree holders for kitchen and coffee bar display.</p>
+          <strong><del>$30.00</del> $28.50</strong>
+        </article>
+        <article>
+          <h3>Custom Photo Frame</h3>
+          <p>Custom photo frame made as a personal gift or display piece.</p>
+          <strong>$55.00</strong>
+        </article>
+        <article>
+          <h3>Layered Wooden Designs</h3>
+          <p>Multiple layers of wood create detailed images with depth and texture.</p>
+          <strong>$15.00</strong>
+        </article>
+        <article>
+          <h3>Emoji Earrings</h3>
+          <p>Whimsical wood earrings with emoji style options.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Heart Earrings</h3>
+          <p>Lightweight laser-cut heart earring designs.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Animal Earrings</h3>
+          <p>Animal-themed wooden earrings.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Misc. Earrings</h3>
+          <p>Assorted wooden earring designs.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Food Earrings</h3>
+          <p>Food-themed lightweight wood earrings.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Lily Earrings</h3>
+          <p>Floral lily earring design.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Tulip Earings</h3>
+          <p>Handmade tulip earrings in sustainable, lightweight wood art.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Heirloom Rocking Horse</h3>
+          <p>Handcrafted solid wood rocking horse made for lasting beauty and memories.</p>
+          <strong>$700.00</strong>
+        </article>
+        <article>
+          <h3>Daisy Earings</h3>
+          <p>Floral daisy earring design.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Rose Earings</h3>
+          <p>Floral rose earring design.</p>
+          <strong>$6.00</strong>
+        </article>
+        <article>
+          <h3>Folded Flag</h3>
+          <p>Patriotic folded flag decor.</p>
+          <strong>$7.00</strong>
+        </article>
+        <article>
+          <h3>Custom Canvas Art</h3>
+          <p>Custom canvas artwork.</p>
+          <strong><del>$40.00</del> $32.00</strong>
+        </article>
+        <article>
+          <h3>Wavy Flag</h3>
+          <p>Dimensional wavy American flag wall art. Sizes: 25" x 13", 31" x 16.25", and 60" x 32.5".</p>
+          <strong>$105.00</strong>
+        </article>
+        <article>
+          <h3>Standard American Flag</h3>
+          <p>Handcrafted American flag decor. Sizes: 25" x 13", 31" x 16.25", and 60" x 32.5".</p>
+          <strong>$70.00</strong>
+        </article>
+        <article>
+          <h3>Premium Metal Business Cards</h3>
+          <p>Durable aluminum alloy business cards, laser engraved with color and amount options.</p>
+          <strong><del>$55.00</del> $44.00</strong>
+        </article>
+        <article>
+          <h3>Better with Dogs</h3>
+          <p>Dog-themed decor piece.</p>
+          <strong><del>$20.00</del> $15.00</strong>
+        </article>
+        <article>
+          <h3>Scripture Wall Hanging</h3>
+          <p>Scripture-inspired wall hanging for home decor.</p>
+          <strong><del>$25.00</del> $20.50</strong>
+        </article>
+        <article>
+          <h3>Pledge of Allegiance Board</h3>
+          <p>Artisanal patriotic Pledge of Allegiance board.</p>
+          <strong><del>$18.00</del> $16.20</strong>
+        </article>
+        <article>
+          <h3>Nativity Silhuette</h3>
+          <p>Nativity silhouette decor for Christmas indoors or outdoors.</p>
+          <strong><del>$10.50</del> $9.45</strong>
+        </article>
+        <article>
+          <h3>Magnets</h3>
+          <p>Woodcraft magnets with amount options.</p>
+          <strong>$2.00</strong>
+        </article>
+      </div>
+      <a class="button primary catalog-button" href="#custom">Start an order</a>
+    </section>
+
+    <section class="gallery-band" aria-label="Woodcraft details">
+      <img src="https://images.pexels.com/photos/175709/pexels-photo-175709.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Wood shavings on a rustic workbench">
+      <img src="https://unsplash.com/photos/hEGOfI6oe94/download?force=true&w=900" alt="People carving wooden spoons at a workshop">
+      <img src="https://unsplash.com/photos/2a_V6F_LDgc/download?force=true&w=900" alt="A wooden table topped with woodworking tools">
+      <div>
+        <p class="eyebrow">Care included</p>
+        <h2>Every finished piece ships with simple care instructions.</h2>
+        <p>Use it, wipe it, oil it when it looks thirsty. Good wood should age into your home, not sit untouched on a shelf.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div>
+        <p class="eyebrow">Contact info</p>
+        <h2>Reach Wabekes Woodcraft Creations.</h2>
+        <p>Use the form for product questions, custom orders, shipping questions, pickup details, or laser engraving requests.</p>
+        <ul class="contact-list">
+          <li><strong>Location</strong><span>Hamilton, Michigan</span></li>
+          <li><strong>Phone</strong><a href="tel:+16162980401">616-298-0401</a></li>
+          <li><strong>Phone</strong><a href="tel:+12694554530">269-455-4530</a></li>
+          <li><strong>Email</strong><a href="mailto:WabekesWoodcraftCreations@gmail.com">WabekesWoodcraftCreations@gmail.com</a></li>
+        </ul>
+      </div>
+      <form class="contact-form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="project">Project details</label>
+        <textarea id="project" name="project" rows="5" placeholder="Product name, quantity, personalization, color, stain, wood type, deadline, and shipping or pickup questions." required></textarea>
+        <button class="button primary wide" type="submit">Prepare inquiry</button>
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Wabekes Woodcraft Creations</p>
+    <span>Hamilton, Michigan | 616-298-0401 | 269-455-4530 | WabekesWoodcraftCreations@gmail.com</span>
+    <small>Authentic woodcraft, laser engraving, custom gifts, decor, and small-batch handmade pieces.</small>
+  </footer>
+
+  <div id="cartOverlay" class="cart-overlay" hidden></div>
+  <aside id="cartPanel" class="cart-panel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-panel-header">
+      <div>
+        <p class="eyebrow">Online order</p>
+        <h2>Your cart</h2>
+      </div>
+      <button id="closeCartButton" class="icon-button" type="button" aria-label="Close cart">x</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cartTotal">$0.00</strong>
+    </div>
+    <form id="checkoutForm" class="checkout-form">
+      <h3>Checkout details</h3>
+      <label for="checkoutName">Name</label>
+      <input id="checkoutName" name="name" type="text" autocomplete="name" required>
+      <label for="checkoutEmail">Email</label>
+      <input id="checkoutEmail" name="email" type="email" autocomplete="email" required>
+      <label for="checkoutPhone">Phone</label>
+      <input id="checkoutPhone" name="phone" type="tel" autocomplete="tel" required>
+      <label for="checkoutMethod">Pickup or shipping</label>
+      <select id="checkoutMethod" name="method">
+        <option>Pickup in Hamilton, Michigan</option>
+        <option>Ship my order</option>
+      </select>
+      <label for="checkoutAddress">Shipping address or pickup notes</label>
+      <textarea id="checkoutAddress" name="address" rows="3"></textarea>
+      <label for="checkoutNotes">Order notes</label>
+      <textarea id="checkoutNotes" name="notes" rows="3" placeholder="Deadline, personalization notes, preferred contact method, or payment questions."></textarea>
+      <button class="button primary wide" type="submit">Review purchase</button>
+      <p id="checkoutStatus" class="form-status" role="status"></p>
+      <p class="checkout-note">Secure online checkout is handled by Stripe or PayPal after you review the order.</p>
+    </form>
+  </aside>
+
+  <div id="purchaseOverlay" class="cart-overlay" hidden></div>
+  <aside id="purchasePanel" class="purchase-panel" aria-label="Purchase review" aria-hidden="true">
+    <div class="cart-panel-header">
+      <div>
+        <p class="eyebrow">Review purchase</p>
+        <h2>Place your order</h2>
+      </div>
+      <button id="closePurchaseButton" class="icon-button" type="button" aria-label="Close purchase review">x</button>
+    </div>
+    <div class="purchase-content">
+      <div>
+        <h3>Order summary</h3>
+        <div id="purchaseSummary" class="purchase-summary"></div>
+      </div>
+      <div>
+        <h3>Customer details</h3>
+        <div id="purchaseCustomer" class="purchase-customer"></div>
+      </div>
+      <div class="purchase-total">
+        <span>Total due</span>
+        <strong id="purchaseTotal">$0.00</strong>
+      </div>
+      <div class="payment-options">
+        <h3>Payment method</h3>
+        <div id="paymentOptions" class="payment-option-list"></div>
+      </div>
+      <p class="checkout-note">Cards, Apple Pay, and Google Pay open through Stripe Checkout. PayPal opens through PayPal checkout.</p>
+      <button id="placeOrderButton" class="button primary wide" type="button">Continue to secure payment</button>
+      <button id="backToCartButton" class="button ghost wide" type="button">Back to cart</button>
+      <p id="purchaseStatus" class="form-status" role="status"></p>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
